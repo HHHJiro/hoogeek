@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css相册</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding:0;
+		}
+		#photo{
+			position: relative;
+			width: 1200px;
+			height: 868px;
+			margin:  0 auto;
+			background: #333;
+		}
+		h1{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			width: 100px;
+			height: 20px;
+			text-align: right;
+			font: normal 12px/1.5em "宋体";
+		}
+		ul{
+			float: right;
+			width: 148px;
+			height:590px; 
+			list-style: none;
+		}
+		li{
+			float: left;
+			width: 54px;
+			height: 54px;
+			margin: 10px;
+			display: inline; /*解决IE6双倍间距bug*/
+			overflow: hidden;
+		}
+		li a {
+			display: block;
+			width: 50px;
+			height: 50px;
+			overflow: hidden; /*添加这个使a的右和下边框存在，不然会被撑开*/
+			border: 2px solid #ccc;
+		}
+		img{
+			display: block;
+			border: 0 none;
+			margin: -150px 0 0 -80px;  /*找一个地方放置镜头*/
+		}
+		li a:hover{
+			border:  2px solid #000;
+		}
+		li a:hover img{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			margin: 0;
+			border: 2px solid #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="photo">
+		<h1>简易 css 相册</h1>
+		<ul>
+			<li><a href="#"><img src="../img/ph1.JPG" alt=""></a></li>	
+			<li><a href="#"><img src="../img/ph2.JPG" alt=""></a></li>
+			<li><a href="#"><img src="../img/ph3.JPG" alt=""></a></li>
+			<li><a href="#"><img src="../img/ph4.JPG" alt=""></a></li>
+			<li><a href="#"><img src="../img/ph5.JPG" alt=""></a></li>
+			<li><a href="#"><img src="../img/ph6.JPG" alt=""></a></li>
+			<li><a href="#"><img src="../img/ph7.JPG" alt=""></a></li>
+			<li><a href="#"><img src="../img/ph8.JPG" alt=""></a></li>
+			<li><a href="#"><img src="../img/ph9.JPG" alt=""></a></li>
+			<li><a href="#"><img src="../img/ph10.JPG" alt=""></a></li>
+		</ul>
+	</div>
+</body>
+</html>
