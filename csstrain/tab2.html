@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#tab{
+			position: relative;
+			width: 570px;
+		}
+		#tab div{
+			float: left;
+			width: 564px;
+			border:  solid #d4d3c3;
+			border-width: 0 1px 1px;
+		}
+		#tab div{
+			display: none;
+		}
+		#tab .up{
+			width: 112px;
+			background: #fff;
+			border:  solid #d4d3c3;
+			border-width: 1px 1px 0;
+		}
+		#tab .block{
+			display: block;
+			padding-bottom: 10px;
+		}
+		#tab h3
+		{
+			float: left;
+			width: 114px;
+			height: 26px;
+			margin:0 -1px 0 0;
+			line-height: 26px;
+			font-size: 14px;
+			font-weight: normal;
+			text-align: center;
+			color: #00007f;
+			background:  #eee;
+			cursor: pointer;
+
+		}
+		#tab ul{
+			margin: 15px 0 0;
+			padding: 0;
+			list-style: none;
+		}
+		#tab li{
+			display: inline;
+			float: left;
+			width: 47.9%;
+			height: 22px;
+			margin: 0 1%;
+			line-height: 22px;
+			text-indent: 10px;
+			border-bottom: 1px dashed #dedede;
+		}
+		#tab li a {
+			font-size: 12px;
+			text-decoration: none;
+			text-indent: 10px;
+			color: #333;
+		}
+		#tab li a:hover{
+			text-decoration: underline;
+			color: #ff0000;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="tab">
+		<h3 class="up" onmouseover="go_to(1)">选择一</h3>
+		<h3 onmouseover="go_to(2)">选择二</h3>
+		<h3 onmouseover="go_to(3)">选择三</h3>
+		<h3 onmouseover="go_to(4)">选择四</h3>
+		<h3 onmouseover="go_to(5)">选择五</h3>
+		<div class="block">
+			<ul>
+			<li><a href="#">1.刘翔搬入新豪宅  </a></li>
+			<li><a href="#">1.汽车自燃吞没车身</a></li>
+			<li><a href="#">1.面包车坠深崖    </a></li>
+			<li><a href="#">1.空间科学任务启动</a></li>
+			</ul>	
+		</div>
+		<div >
+			<ul>
+			<li><a href="#">2.刘翔搬入新豪宅  </a></li>
+			<li><a href="#">2.汽车自燃吞没车身</a></li>
+			<li><a href="#">2.面包车坠深崖    </a></li>
+			<li><a href="#">2.空间科学任务启动</a></li>
+			</ul>	
+		</div>
+		<div >
+			<ul>
+			<li><a href="#">3.刘翔搬入新豪宅  </a></li>
+			<li><a href="#">3.汽车自燃吞没车身</a></li>
+			<li><a href="#">3.面包车坠深崖    </a></li>
+			<li><a href="#">3.空间科学任务启动</a></li>
+			</ul>	
+		</div>
+		<div >
+			<ul>
+			<li><a href="#">4.刘翔搬入新豪宅  </a></li>
+			<li><a href="#">4.汽车自燃吞没车身</a></li>
+			<li><a href="#">4.面包车坠深崖    </a></li>
+			<li><a href="#">4.空间科学任务启动</a></li>
+			</ul>	
+		</div>
+		<div >
+			<ul>
+			<li><a href="#">5.刘翔搬入新豪宅  </a></li>
+			<li><a href="#">5.汽车自燃吞没车身</a></li>
+			<li><a href="#">5.面包车坠深崖    </a></li>
+			<li><a href="#">5.空间科学任务启动</a></li>
+			</ul>	
+		</div>
+	</div>
+	<script type="text/javascript">
+		var h = document.getElementById("tab").getElementsByTagName("h3");
+		var d = document.getElementById("tab").getElementsByTagName("div");
+		function go_to(ao){
+			for (var i =0; i<h.length; i++) {
+				if (ao-1==i) {
+					h[i].className+=" up";
+					d[i].className+=" block"	
+				}
+				else
+				{
+					h[i].className=" ";
+					d[i].className=" "	
+				}
+				
+			}
+		}
+	</script>
+</body>
+</html>
