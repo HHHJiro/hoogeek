@@ -3,8 +3,122 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/calendar_main.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;	
+			font-size: 14px;
+			font-family: "宋体",Arial,sans-serif;
+		}
+		div{
+			width: 204px;
+			height: 204px;
+			margin: 0 auto ;
+		}
+		table{
+			border-collapse: collapse;
+			text-align: center;
+		}
+		td{
+			width: 28px;
+			height: 28px;
+			line-height: 28px;
+			border: 1px solid #d2e1f1;
+		}
+		.chooseDate{
+			width: 204px;
+			height: 28px;
+			text-align: center;
+			margin-top: 10px;
+			overflow: hidden;
+		}
+		.chooseDate input{
+			display: inline-block;
+			outline: none;
+		}
+		.chooseDate #year{
+			width: 32px;
+		}
+		.chooseDate #month{
+			width: 16px;
+		}
+	</style>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+	<div class="outbox">
+		<div class="chooseDate">
+			<input id="year" type="text"> <span>年</span> <input id="month" type="text"> <span>月</span>
+		</div>
+		<div id="calendarDiv">
+			<table id="calendar">
+				<tr>
+					<th>日</th>
+					<th>一</th>
+					<th>二</th>
+					<th>三</th>
+					<th>四</th>
+					<th>五</th>
+					<th>六</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+	</div>
 	
 </body>
 </html>
