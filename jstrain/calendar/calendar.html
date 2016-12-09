@@ -3,13 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="css/calendar_main.css">
 	<style type="text/css">
 		*{
 			margin: 0;
 			padding: 0;	
-			font-size: 14px;
-			font-family: "宋体",Arial,sans-serif;
+		}
+		body{
+			font: 14px 宋体, "Arial Narrow", HELVETICA;
 		}
 		div{
 			width: 204px;
@@ -26,9 +26,14 @@
 			line-height: 28px;
 			border: 1px solid #d2e1f1;
 		}
+		td:hover{
+			background: #458fce;
+			color: #fff;
+		}
 		.chooseDate{
 			width: 204px;
 			height: 28px;
+			line-height: 28px;
 			text-align: center;
 			margin-top: 10px;
 			overflow: hidden;
@@ -43,14 +48,55 @@
 		.chooseDate #month{
 			width: 16px;
 		}
+		.chooseDate span{
+			/*display: inline-block;*/
+			width: 14px;
+			height: 14px;
+			line-height: 28px;
+		}
+		.chooseDate .print_date{
+			float: left;
+			width: 140px;
+			height: 28px;
+		}
+		.chooseDate .date {
+			float: left;
+			width: 32px;
+			height: 28px;
+		}
+		.wcolor{
+			/*background: #4da3e0;*/
+			color: #4da3e0;
+			font-weight: 700;
+			cursor: pointer;
+
+		}
+		.chooseDate .add{
+			float: right;
+		}
+		.thisday{
+			color: #458fce;
+		}
 	</style>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 	<div class="outbox">
 		<div class="chooseDate">
-			<input id="year" type="text"> <span>年</span> <input id="month" type="text"> <span>月</span>
-		</div>
+			<div class="reduce date">
+				<span class="yr wcolor"><<</span >
+				<span class="mr wcolor"><</span>
+			</div>
+			
+			<div class="print_date">
+				<input id="year"  type="text"> <span>年</span> 
+				<input id="month"  type="text"> <span>月</span>
+			</div>
+			<div class="add date">
+				<span class="ma wcolor">></span>
+				<span class="ya wcolor">>></span>
+			</div>
+		</div> 
 		<div id="calendarDiv">
 			<table id="calendar">
 				<tr>
@@ -118,6 +164,7 @@
 				</tr>
 			</table>
 		</div>
+		<div><p >选择的日期： <span id="undertable"></span></p></div>
 	</div>
 	
 </body>
