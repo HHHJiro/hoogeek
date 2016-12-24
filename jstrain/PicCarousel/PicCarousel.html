@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播</title>
+	<style type="text/css">
+	body, ul, li, a{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		font-family: "宋体",arial,sans-serif;
+	}
+	h1{
+		text-align: center;
+	}
+		#banner{
+			position: relative;
+			width: 520px;
+			height: 280px;
+			margin:0 auto;
+			overflow: hidden;
+		}
+		#boxin{
+			position: absolute;
+			left: 0;
+			width: 2600px;
+			height: 280px;
+			transition: all 0.5s;
+		}
+		#boxin div{
+			float: left;
+			width: 520px;
+			height: 280px;
+			
+		}
+		.current{
+			background: #FF4400;
+		}
+		ul{
+			position: absolute;
+			bottom: 10px;
+			left:215px;
+			z-index: 99;
+			width:70px;
+			height: 14px;
+			list-style: none;
+			border-radius: 5px;
+			background-color: rgba(255,255,255,.3);
+
+		}
+		ul li{
+			float: left;
+			width: 14px;
+			height: 14px;
+		}
+		ul li a{
+			display: block;
+			width: 10px;
+			height: 10px;
+			margin: 2px;
+			border-radius: 50%;
+			background: #b7b7b7;
+		}
+	</style>
+</head>
+<body>
+	<h1>PicCarousel</h1>
+	<div id="banner">
+	</div>
+	<script type="text/javascript">
+		function picCar(){}
+		picCar.prototype={
+			boxout : null,//最外层盒子
+			boxin  :null, //内层盒子
+			left : null, //平移位置 
+			boxul : null, //ul
+			// numlist:null, 
+			links:null, //a标签
+			picwidth : 520,//图片长度
+			links : [], //下方圆点
+			imgurl :[], //图片数组
+			timer:null,
+			count:0,
+		$:function(obj)
+		{
+			if(typeof(obj)=="string")
+			{
+				if(obj.indexOf("#")>=0)
+				{
+					obj=obj.replace("#","");
+					if(document.getElementById(obj))
+					{
+						return document.getElementById(obj);
+					}
+					else
+					{
+						alert("没有容器"+obj);
+						return null;
+					}	
+				}
+				else
+				{
+					return document.createElement(obj);
+				}
+			}
+			else
+			{
+				return obj;
+			}
+		},
+			createEle:function(id){
+				this.count=this.count<=5?this.count:5;
+				this.boxout = this.$(id);
+				this.boxin = this.$("div");
+				this.boxout.appendChild(this.boxin);
+				this.boxul = this.$("ul");
+				this.boxout.appendChild(this.boxul);
+				this.boxin.setAttribute("id","boxin");
+				for (var i = 0; i < this.count; i++) {
+					var imgdiv = this.$("div");
+					imgdiv.innerHTML=this.imgurl[i];
+					this.boxin.appendChild(imgdiv);
+					var ul_li = this.$("li");
+					var li_a = this.$("a");
+					this.links[i] = li_a;
+					li_a.setAttribute("href","#");
+					ul_li.appendChild(li_a);
+					this.boxul.appendChild(ul_li);
+				}
+			},
+			//程序入口
+			action:function(){
+				this.init();
+				this.play();
+				this.addOnclick();
+			},
+			init:function(left){
+				var leftnum = left || 0;
+				this.left=leftnum;
+				this.boxin.style.left = leftnum+"px";
+				for (var i = 0; i < this.count; i++) {
+					this.links[i].className = " ";
+				}
+				if (leftnum==0) {
+						this.links[0].className = "current";
+					}
+				},
+			play:function(){
+				var $this = this;
+				this.timer = setInterval(function(){
+				$this .auto();
+				},2000)
+			},
+			stop:function(){
+				clearInterval(this.timer);
+			},
+			auto:function(){
+				this.left -=this.picwidth;
+				this.left<(-this.picwidth*(this.count-1))?(this.left=0):this.left;
+				this.addClass("current");
+				this.boxin.style.left = this.left+"px";
+			},
+		
+			addClass:function(value){
+				for(i=0;i<this.count;i++){
+					if(i==Math.abs(this.left/this.picwidth))
+					{
+						this.links[i].className = value;
+					}
+					else{
+						this.links[i].className = " ";
+					}
+				}
+			},
+			addOnclick:function(){
+				var $this = this;
+				for (var i = 0; i < this.count; i++) {
+					$this.links[i].onclick=(function(i){  
+			       return function(){
+			       	$this.stop();
+			       	$this.init(-i*$this.picwidth);
+			       	this.className = "current"
+			       	$this.play();
+			       }  
+			    })(i)  
+				}
+			}
+		}
+		window.onload=function(){
+			var piccar = new picCar();
+			piccar.count=5;
+			piccar.imgurl = [
+			"<img src=\"banner1.png\"/>",
+			"<img src=\"banner2.png\"/>",
+			"<img src=\"banner3.jpg\"/>",
+			"<img src=\"banner4.jpg\"/>",
+			"<img src=\"banner5.jpg\"/>"
+			];
+			piccar.createEle("#banner");
+			piccar.action();
+			}	
+	</script>
+</body>
+</html>

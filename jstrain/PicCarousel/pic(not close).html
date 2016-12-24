@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body, ul, li, a{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		font-family: "宋体",arial,sans-serif;
+	}
+	h1{
+		text-align: center;
+	}
+		#banner{
+			position: relative;
+			width: 520px;
+			height: 280px;
+			margin:0 auto;
+			overflow: hidden;
+		}
+		#boxin{
+			position: absolute;
+			left: 0;
+			width: 2600px;
+			height: 280px;
+			transition: all 0.5s;
+		}
+		#boxin div{
+			float: left;
+			width: 520px;
+			height: 280px;
+			
+		}
+		.current{
+			background: #FF4400;
+		}
+		ul{
+			position: absolute;
+			bottom: 10px;
+			left:215px;
+			z-index: 99;
+			width:70px;
+			height: 14px;
+			list-style: none;
+			border-radius: 5px;
+			background-color: rgba(255,255,255,.3);
+
+		}
+		ul li{
+			float: left;
+			width: 14px;
+			height: 14px;
+		}
+		ul li a{
+			display: block;
+			width: 10px;
+			height: 10px;
+			margin: 2px;
+			border-radius: 50%;
+			background: #b7b7b7;
+		}
+	</style>
+</head>
+<body>
+	<h1>PicCarousel</h1>
+	<div id="banner">
+	<div id="boxin">
+		<div><img src="banner1.png" alt="banner1"></div>
+		<div><img src="banner2.png" alt="banner2"></div>
+		<div><img src="banner3.jpg" alt="banner3"></div>
+		<div><img src="banner4.jpg" alt="banner4"></div>
+		<div><img src="banner5.jpg" alt="banner5"></div>
+	</div>
+	
+	<ul>
+		<li><a href="#banner1" ></a></li>
+		<li><a href="#banner2"></a></li>
+		<li><a href="#banner3"></a></li>
+		<li><a href="#banner4"></a></li>
+		<li><a href="#banner5"></a></li>
+	</ul>
+	</div>
+	<script type="text/javascript">
+		var box  = document.getElementById("banner");
+		var indiv = document.getElementById("boxin");
+		var picwidth = 520;
+		var links = box.getElementsByTagName("a");
+		var picnum = indiv.getElementsByTagName("div").length;
+		var timer;//设置自动播放定时器
+		indiv.left=0;
+		function play(){
+			timer = setInterval(function(){
+				auto(indiv,picwidth)
+			},2000)
+		}
+		function stop(){
+			clearInterval(timer);
+		}
+		function auto(id,picwidth){
+				var $this = id;
+				$this.left -=picwidth;
+				$this.left<(-picwidth*4)?($this.left=0):$this.left;
+				addClass($this.left, "current");
+				$this.style.left = $this.left+"px";
+		}
+		
+		function addClass(left, value){
+			for(i=0;i<links.length;i++){
+				if(i==Math.abs(left/picwidth))
+				{
+					links[i].className = value;
+				}
+				else{
+					links[i].className = " ";
+				}
+			}
+		}
+		function addOnclick(){
+			for (var i = 0; i < links.length; i++) {
+				links[i].onclick=(function(i){  
+			       return function(){
+			       	stop();
+			       	init(-i*picwidth);
+			       	this.className = "current"
+			       	play();
+			       }  
+			    })(i)  
+				}
+				return true;
+		}
+		function init(left){
+
+			indiv.style.left = left+"px";
+			for (var i = 0; i < links.length; i++) {
+				links[i].className = " ";
+			}
+			if (left==0) {
+					links[0].className = "current";
+				}
+		}
+		window.onload=function(){
+			init(0);
+			play();
+			addOnclick();
+			}	
+	</script>
+</body>
+</html>
