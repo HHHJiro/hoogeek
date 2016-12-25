@@ -34,8 +34,36 @@
 			height: 280px;
 			
 		}
+		#banner:hover i{
+			display: block;
+		}
 		.current{
 			background: #FF4400;
+		}
+		.clibtn{
+		position: absolute;
+		display: none;
+		width: 20px;
+		height: 32px;
+		background: rgba(179,179,179,0.4);
+		top: 50%;
+		margin-top: -16px;
+		z-index: 99;
+		}
+		.clibtn:hover{
+			background: #808080;
+		}
+		.clibtn img{
+			display: block;
+			width: 20PX;
+			height: 20PX;
+			margin: 6px 0;
+		}
+		.prev{
+			left: 0;
+		}
+		.next{
+			right: 0;
 		}
 		ul{
 			position: absolute;
@@ -76,10 +104,13 @@
 			left : null, //平移位置 
 			boxul : null, //ul
 			// numlist:null, 
+			prev:null, //前一个按钮
+			next:null, //后一个按钮
 			links:null, //a标签
 			picwidth : 520,//图片长度
 			links : [], //下方圆点
 			imgurl :[], //图片数组
+			btn:[],     //存放按钮图片
 			timer:null,
 			count:0,
 		$:function(obj)
@@ -117,6 +148,14 @@
 				this.boxul = this.$("ul");
 				this.boxout.appendChild(this.boxul);
 				this.boxin.setAttribute("id","boxin");
+				this.prev = this.$("i");
+				this.prev.innerHTML=this.btn[0];
+				this.prev.setAttribute("class","prev clibtn");
+				this.next = this.$("i");
+				this.next.innerHTML=this.btn[1];
+				this.next.setAttribute("class","next clibtn");
+				this.boxout.appendChild(this.prev);
+				this.boxout.appendChild(this.next);
 				for (var i = 0; i < this.count; i++) {
 					var imgdiv = this.$("div");
 					imgdiv.innerHTML=this.imgurl[i];
@@ -134,6 +173,7 @@
 				this.init();
 				this.play();
 				this.addOnclick();
+				this.addPreNext();
 			},
 			init:function(left){
 				var leftnum = left || 0;
@@ -173,6 +213,21 @@
 					}
 				}
 			},
+			addPreNext:function(){
+				var $this = this;
+					this.prev.onclick=function(){
+					$this.stop();
+			       	$this.init($this.left>=0?(-($this.count-1)*$this.picwidth):($this.picwidth+$this.left));
+			       	$this.links[Math.abs($this.left/$this.picwidth)].className ="current";
+			       	$this.play();
+				}
+				this.next.onclick=function(){
+					$this.stop();
+			       	$this.init($this.left<=(-($this.count-1)*$this.picwidth)?0:($this.left-$this.picwidth));
+			       	$this.links[Math.abs($this.left/$this.picwidth)].className ="current";
+			       	$this.play();
+				}
+			},
 			addOnclick:function(){
 				var $this = this;
 				for (var i = 0; i < this.count; i++) {
@@ -180,7 +235,7 @@
 			       return function(){
 			       	$this.stop();
 			       	$this.init(-i*$this.picwidth);
-			       	this.className = "current"
+			       	this.className = "current";
 			       	$this.play();
 			       	return false;
 			       }  
@@ -197,6 +252,10 @@
 			"<img src=\"banner3.jpg\"/>",
 			"<img src=\"banner4.jpg\"/>",
 			"<img src=\"banner5.jpg\"/>"
+			];
+			piccar.btn=[
+				"<img src=\"prev.png\"/>",
+				"<img src=\"next.png\"/>"
 			];
 			piccar.createEle("#banner");
 			piccar.action();
