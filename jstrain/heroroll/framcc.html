@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body,div,ul,li,i,img,p,h1,h2,h3,h4,h5,h6{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: url(bg.jpg) no-repeat 0 0;
+			font-family: arial,sans-serif;
+			background-color: #000;
+		}
+		#box{
+			position: relative;
+			margin: 0 auto;
+			width: 1000px;
+			height: 250px;
+		}
+		h1{
+			text-align: center;
+		}
+		h4{
+			font-size: 14px;
+			line-height: 14px;
+		}
+		.btn{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top: -39px;
+			width: 36px;
+			height: 48px;
+			background: #808080; 
+		}
+		.prev{
+			left: 160px;
+		}
+		.next{
+			left: 805px;
+		}
+		ul li{
+			position: absolute;
+			list-style-type: none;
+			float: left;
+			background: #333;
+			line-height: 220px;
+			color: #fff;
+			transition: all 1s;
+			border: 2px solid #4aa1e0;
+			overflow: hidden;
+		}
+		ul li img{
+			width: 100%;
+			height: 100%;
+		}
+		ul li div{
+			position: absolute;
+			width: 100%;
+			height: 80px;
+			bottom: -80px;
+			transition: all 0.75s;
+		}
+		ul li p {
+			width: 100%;
+			height: 60px;
+			font-size: 12px;
+			line-height: 14px;	
+		}
+		ul{
+			position: relative;
+			width: 590px;
+			height: 250px;
+			/*text-align: center;*/
+			margin: 0 auto;
+			background: transparent;
+		}
+		li.li_nl{
+			top: 40px;
+			left: 44px;
+			width: 108px;
+			height: 140px;
+			z-index: 1;
+		}
+		li.li_sl{
+			top: 40px;
+			left: 0;
+			width: 108px;
+			height: 140px;
+			z-index: 2;
+		}
+		li.li_ml{
+			top: 20px;
+			left: 88px;
+			width: 140px;
+			height: 180px;
+			z-index: 3;
+		}
+		li.current{
+			opacity: 1;
+			top: 0;
+			left: 208px;
+			width: 171px;
+			height: 220px;
+			opacity: 1.0;
+			z-index: 4;
+		}
+		li.current:hover > div{
+			bottom: 0;
+		}
+		li.li_mr{
+			top: 20px;
+			left: 359px;
+			width: 140px;
+			height: 180px;
+			z-index: 3;
+		}
+		li.li_sr{
+			top: 40px;
+			left: 479px;
+			width: 108px;
+			height: 140px;
+			z-index: 2;
+		}
+		li.li_nr{
+			top: 40px;
+			left: 435px;
+			width: 108px;
+			height: 140px;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<h1>滚动图片窗口</h1>
+	<div id="box">
+	<i class="prev btn" id="prev">prev</i>
+	<i class="next btn" id="next">next</i>
+	<ul>
+		<li class="li_nl"></li>
+		<li class="li_sl"></li>
+		<li class="li_ml" ></li>
+		<li class="current" ></li>
+		<li class="li_mr" ></li>
+		<li class="li_sr"></li>
+		<li class="li_nr"></li>
+	</ul>		
+	</div>
+	<script type="text/javascript">
+		function moveLi(){}
+		moveLi.prototype={
+			timer:null,
+			index:4,
+			lis :null,
+			lidis:[],
+			prev:null,
+			next:null,
+			flag:null,
+			imgs:[],
+			borderstyle:[
+				"2px solid #ea4335",
+				"2px solid #4aa1e0"
+			],
+			createTimer:function(){
+				for (var i = 0; i < this.lis.length; i++) {
+					this.lis[i].innerHTML = this.imgs[i] + this.lidis[i];
+					if(this.lis[i].getAttribute("class")=="current"){
+						if (this.flag == -1) {
+							this.index = (i-1)%(this.lis.length)<0?(i-1+this.lis.length):((i-1)%(this.lis.length));
+							this.flag =0;
+							break;
+						}
+						else if (this.flag == 1) {
+							this.index = (i+1)%(this.lis.length);
+							this.flag = 0;
+							break
+						}
+						else
+						this.index = (i+1)%(this.lis.length);
+					}
+				}
+				this.lis[(this.index-3)<0?(this.index-3+this.lis.length):(this.index-3)].className="li_nl";
+				this.lis[(this.index-2)<0?(this.index-2+this.lis.length):(this.index-2)].className="li_sl";
+				this.lis[(this.index-1)<0?(this.index-1+this.lis.length):(this.index-1)].className="li_ml";
+				this.lis[this.index].className="current";
+				this.lis[(this.index+1)%(this.lis.length)].className="li_mr";
+				this.lis[(this.index+2)%(this.lis.length)].className="li_sr";
+				this.lis[(this.index+3)%(this.lis.length)].className="li_nr";
+			},
+			//初始化
+			init:function(id){
+				var $this = this;
+				this.lis = document.getElementById(id).getElementsByTagName("li");
+				this.timer = setInterval(function(){
+					return $this.createTimer();
+				},1500);
+			},
+			bandoverout:function(){
+				if (!this.lis) {
+					this.lis = document.getElementById("box").getElementsByTagName("li");
+				}
+				for (var i = 0; i < this.lis.length; i++) {
+					this.liout(i);
+					this.liover(i);
+				}
+			},
+			liout:function(index){
+				var $this = this;
+				this.lis[index].onmouseout=function(){
+					this.style.border=$this.borderstyle[1];
+					if($this.timer == null){
+					$this.timer = setInterval(function(){
+					return $this.createTimer();
+				},1500);
+					
+					}
+				if (this.timer) {
+					return false;
+				}
+				};
+			},
+			liover:function(index){
+				// var indexnum =index || this.index;
+				var $this = this;  
+				this.lis[index].onmouseover =function(){
+					this.style.border = $this.borderstyle[0];
+					$this.stop();
+					$this.timer=null;
+				}
+				
+			},
+			stop:function(){
+				clearInterval(this.timer);
+			},
+			prev:function(){
+				var $this = this;
+				this.prev = document.getElementById("prev");
+				this.prev.onclick = function(){
+					$this.stop();
+					$this.flag=-1;
+					$this.timer = setInterval(function(){
+					return $this.createTimer();
+				},1500);
+				}
+			},
+			next:function(){
+				var $this = this;
+				this.prev = document.getElementById("next");
+				this.prev.onclick = function(){
+					$this.flag=1;
+				}
+			},
+			action:function(id){
+				this.init(id);
+				this.bandoverout();
+				this.prev();
+				this.next();
+			}
+		}
+		window.onload = function(){
+			var moveli = new moveLi();
+			moveli.imgs = [
+			"<img src=\"libg1.png\"/>",
+			"<img src=\"libg2.png\"/>",
+			"<img src=\"libg3.png\"/>",
+			"<img src=\"libg4.png\"/>",
+			"<img src=\"libg5.png\"/>",
+			"<img src=\"libg6.png\"/>",
+			"<img src=\"libg7.png\"/>"
+			];
+			moveli.lidis=[
+				"<div><h4>选手 <span>一号</span></h4><p>这是我们的一号选手</p>",
+				"<div><h4>选手 <span>二号</span></h4><p>这是我们的二号选手</p>",
+				"<div><h4>选手 <span>三号</span></h4><p>这是我们的三号选手</p>",
+				"<div><h4>选手 <span>四号</span></h4><p>这是我们的四号选手</p>",
+				"<div><h4>选手 <span>五号</span></h4><p>这是我们的五号选手</p>",
+				"<div><h4>选手 <span>六号</span></h4><p>这是我们的六号选手</p>",
+				"<div><h4>选手 <span>七号</span></h4><p>这是我们的七号选手</p>"
+			];
+			moveli.action("box");
+		}
+	</script>
+</body>
+</html>
