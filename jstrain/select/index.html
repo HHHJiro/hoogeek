@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>select</title>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<style type="text/css">
+	body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+	body{font:12px "Helvetica","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+
+	.select_box{
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		max-width: 200px;
+		min-width: 50px;
+		border: 1px solid #DDD;
+	    border-top: 1px solid #EEE;
+	    border-bottom: 1px solid #B7B7B7;
+	    margin: 8px 15px;
+	    cursor: default;
+	    vertical-align: middle;
+	}
+	.select_box:hover{
+		border-color: #09E;
+	}
+	.select_inner{
+		padding: 3px 0 3px 5px;
+		line-height: 22px;
+		max-height: 22px;
+		background: #fafafa;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}	
+	dl{
+		max-width: 200px;
+	}
+	dl dd{
+		font-size: 12px;
+		white-space: nowrap;
+		padding: 8px 10px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		cursor: pointer;
+		min-width: 50px;
+		text-overflow: ellipsis;
+	}
+	dd.option_dd:hover{
+		outline:  0 none;
+		background : #eee;
+	}
+	.option_dl dd.op_selected{
+		background: #495a80;
+		color: #fff;
+	}
+	.option_dl{
+		display: none;
+		z-index: 1;
+		border:1px solid #DDD;
+	}
+	.jiantou{
+    /*top: 50%;*/
+    margin-top: -3px;
+    border-bottom:  5px solid #A7A7A7;
+    border-left: 5px dashed transparent;
+    border-right: 5px dashed transparent;
+    border-top: 0 none;
+    display: block;
+    width: 0;
+    height: 0;
+    overflow:hidden;
+    line-height:0;
+    font-size: 0;
+	}
+
+	dd.option_dd_groupe{
+		background-color: rgb(224, 245, 218);
+		cursor: default;
+	}
+	.select_option{
+
+		display: inline-block;
+	}
+</style>
+<body>
+	<form action="">	
+<select name="grade">
+		<option value="1">5元</option>
+		<option value="2">2年级</option>
+		<option value="3">3年级</option>
+		<option value="4">4年级</option>
+		<option value="5">5年级</option>
+		<option value="6">6年级</option>
+	</select>
+	<select name="class">
+		<optgroup label="普通班">
+			<option value="c1">1班</option>
+			<option value="c2">2班</option>
+			<option value="c3">3班</option>
+			<option value="c4">4班</option>
+		</optgroup>
+		<optgroup label="VIP班">
+			<option value="A">A班</option>
+			<option value="B">B班</option>
+		</optgroup>
+	</select>
+	<select name="slogan" >
+		<option value="7">路漫漫其修远兮，吾将上下而求索！</option>
+		<option value="8">做人要厚道，求学要严谨。</option>
+		<option value="9">勤奋是最好的方法，兴趣是最佳的老师；</option>
+		<option value="10">为了梦想，我们不懈努力。</option>
+	</select>
+	</form>	
+</body>
+</html>
