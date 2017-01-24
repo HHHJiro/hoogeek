@@ -1,0 +1,24 @@
+{
+  "name": "Imooc",
+  "authors": [
+    "HHHJiro <1445422321@qq.com>"
+  ],
+  "description": "0.0.1",
+  "main": "",
+  "keywords": [
+    "imooc"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
