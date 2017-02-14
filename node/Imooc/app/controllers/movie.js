@@ -2,12 +2,19 @@ var _ = require('underscore')
 var Movie = require('../models/movie')
 var Comment = require('../models/comment')
 var Category = require('../models/category')
+var fs = require('fs')
+var path = require('path')
 
 	//detail page
 	exports.detail = function(req, res){
 	var id = req.params.id;
 
 	Movie.findById(id,function(err,movie){
+		Movie.update({_id:id}, {$inc:{pv:1}},function(err){
+			if (err) {
+				console.log(err)
+			}
+		})
 		Comment
 			.find({movie:id})
 			.populate('from','name')
@@ -39,6 +46,29 @@ var Category = require('../models/category')
 	}
 }
 
+	//admin poster
+	exports.savePoster = function(req, res, next){
+		var posterData = req.files.uploadPoster
+		var filePath = posterData.path
+		var originalFilename = posterData.originalFilename
+		if(originalFilename){
+			fs.readFile(filePath, function(err,data){
+				var timestamp = Date.now()
+				var type = posterData.type.split('/')[1]
+				var poster = timestamp + '.' + type
+				var newPath = path.join(__dirname, '../../', '/public/upload/' +poster)
+
+				fs.writeFile(newPath, data, function(err){
+					req.poster = poster
+					next()
+				})
+
+			})
+		}
+		else{
+			next()
+		}
+	};
 
 	//admin save movie
 	exports.save =  function(req,res){
@@ -46,8 +76,11 @@ var Category = require('../models/category')
 	var movieObj = req.body.movie
 	var _movie
 
-	if (id) {
-		
+	if(req.poster){
+		movieObj.poster = req.poster
+	}
+
+	if (id) {	
 		Movie.findById(id, function(err,movie){
 			if (err) {
 				console.log(err)

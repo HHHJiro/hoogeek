@@ -72,7 +72,7 @@ exports.search = function(req, res){
 					currentPage: (page+1)
 					})
 				
-			})
+				})
 			})
 	}
 	
