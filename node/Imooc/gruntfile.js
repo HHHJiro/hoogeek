@@ -10,52 +10,98 @@ module.exports = function(grunt){
 			},
 			js:{
 				files:['public/js/**','models/**/*.js','schemas/**/*.js'],
-				//tasks:['jshint'],
+				tasks:['jshint'],
 				options:{
 					livereload: true
 					}
-				}
-			},
-
-			mochaTest:{
-				options:{
-					reporter:'spec'
 				},
-				src:['test/**/*.js']
-			},
+	        uglify: {
+			    files: ['public/**/*.js'],
+			    tasks: ['jshint'],
+			    options: {
+			      livereload: true
+        		}
+      		},
+        	styles: {
+		        files: ['public/**/*.less'],
+		        tasks: ['less'],
+		        options: {
+          		nospawn: true
+        		}
+     		}
+		},
 
-			nodemon:{
-				dev:{
-					script: 'app.js',  //新版本的改动
-					options:{
-						//file:'app.js',   //不用这个
-						args:[],
-						ignoreFiles:['README.md','node_modules/**','DS_Store'],
-						watchedExtensions:['js'],
-						watchedFolders:['./'],
-						debug:true,
-						delayTime:1,
-						env:{
-							PORT:3000
-						},
-						cwd: __dirname
-					}
-				}
+		jshint:{
+			options:{
+				jshintrc:".jshintrc",
+				ignores:['public/libs/**/*.js']
 			},
-
-			concurrent:{
-				tasks:['nodemon','watch'],
+			all:['public/js/*.js','test/**/*.js']
+		},
+		less:{
+			development:{
 				options:{
-					logConcurrentOutput:true
+					compress:true,
+					yuicompress:true,
+					optimization:2
+				},
+				files:{
+					'public/build/index.css':'public/less/index.less'
 				}
 			}
-		})
+		},
+		uglify:{
+			development:{
+				files:{
+					'public/build/admin.min.js':'public/js/admin.js',
+					'public/build/detail.min.js':[
+					'public/js/detail.js'
+					]
+				}
+			}
+		},
+		mochaTest:{
+			options:{
+				reporter:'spec'
+			},
+			src:['test/**/*.js']
+		},
+
+		nodemon:{
+			dev:{
+				script: 'app.js',  //新版本的改动
+				options:{
+					//file:'app.js',   //不用这个
+					args:[],
+					ignoreFiles:['README.md','node_modules/**','DS_Store'],
+					watchedExtensions:['js'],
+					watchedFolders:['./'],
+					debug:true,
+					delayTime:1,
+					env:{
+						PORT:3000
+					},
+					cwd: __dirname
+				}
+			}
+		},
+
+		concurrent:{
+			tasks:['nodemon','watch','less','uglify','jshint'],
+			options:{
+				logConcurrentOutput:true
+			}
+		}
+	})
 	
 
 	grunt.loadNpmTasks('grunt-contrib-watch')
 	grunt.loadNpmTasks('grunt-nodemon')
 	grunt.loadNpmTasks('grunt-concurrent')
 	grunt.loadNpmTasks('grunt-mocha-test')
+	grunt.loadNpmTasks('grunt-contrib-less')
+	grunt.loadNpmTasks('grunt-contrib-uglify')
+	grunt.loadNpmTasks('grunt-contrib-jshint')
 
 	grunt.option('force',true)
 	grunt.registerTask('default',['concurrent'])

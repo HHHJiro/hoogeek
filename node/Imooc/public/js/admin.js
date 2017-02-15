@@ -7,7 +7,7 @@ $(function(){
 		var tr = $('.item-id-' + id)
 		//发起ajax 请求 类型是DELETE
 		$.ajax({
-			type:"DELETE",
+			type:'DELETE',
 			url:'/admin/movie/list?id='+id
 		})
 		.done(function(results){
