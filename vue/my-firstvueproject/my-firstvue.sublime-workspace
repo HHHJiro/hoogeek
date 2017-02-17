@@ -1,0 +1,1102 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"te",
+				"teacherName"
+			],
+			[
+				"pro",
+				"proto\tPrototype"
+			],
+			[
+				"che",
+				"checkbox"
+			],
+			[
+				"ch",
+				"checked"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"box",
+				"box"
+			],
+			[
+				"nor",
+				"nowrap"
+			],
+			[
+				"liss",
+				"list-style"
+			],
+			[
+				"fi",
+				"fitst_p"
+			],
+			[
+				"p",
+				"p"
+			],
+			[
+				"get",
+				"getElementsByTagName"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"chi",
+				"childWords"
+			],
+			[
+				"store",
+				"Store"
+			],
+			[
+				"item",
+				"items"
+			],
+			[
+				"lo",
+				"localStorage"
+			],
+			[
+				"is",
+				"isFinished"
+			],
+			[
+				"texrd",
+				"text-decoration"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"cs",
+				"className"
+			],
+			[
+				"dl",
+				"dl"
+			],
+			[
+				"for",
+				"for\tJS - For loop"
+			],
+			[
+				"form",
+				"formIndex"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"opt",
+				"option"
+			],
+			[
+				"dd",
+				"ddHandler"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"if",
+				"if\tJS - if"
+			],
+			[
+				"bl",
+				"block"
+			],
+			[
+				"sel",
+				"selects"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"c",
+				"class"
+			],
+			[
+				"d",
+				"document"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"sele",
+				"select"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"borderc",
+				"border-color"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"eve",
+				"eventUtil"
+			],
+			[
+				"ene",
+				"eventUtil"
+			],
+			[
+				"fl",
+				"flag"
+			],
+			[
+				"pr",
+				"prev"
+			],
+			[
+				"bor",
+				"borderstyle"
+			],
+			[
+				"mragin",
+				"margin"
+			],
+			[
+				"clas",
+				"class"
+			],
+			[
+				"time",
+				"timer"
+			],
+			[
+				"lio",
+				"liover"
+			],
+			[
+				"tim",
+				"timer"
+			],
+			[
+				"ti",
+				"timer"
+			],
+			[
+				"fons",
+				"font-size"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"bacc",
+				"background-color"
+			],
+			[
+				"badc",
+				"background"
+			],
+			[
+				"img",
+				"imgs"
+			],
+			[
+				"ig",
+				"imgs"
+			],
+			[
+				"li",
+				"li_mr"
+			],
+			[
+				"tr",
+				"transition"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"im",
+				"images"
+			],
+			[
+				"sect",
+				"sectionId"
+			],
+			[
+				"gete",
+				"getElementById"
+			],
+			[
+				"getbte",
+				"getAttribute"
+			],
+			[
+				"ge",
+				"getElementById"
+			],
+			[
+				"ds",
+				"display"
+			],
+			[
+				"inde",
+				"indexOf"
+			],
+			[
+				"borderr",
+				"border-radius"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"int",
+				"intro"
+			],
+			[
+				"set",
+				"setAttribute"
+			],
+			[
+				"re",
+				"repeat-x"
+			],
+			[
+				"bacmg",
+				"background-image"
+			],
+			[
+				"link",
+				"linktext"
+			],
+			[
+				"add",
+				"addLoadEvent"
+			],
+			[
+				"lin",
+				"linkurl"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"font",
+				"font"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"he",
+				"header\tTag"
+			],
+			[
+				"le",
+				"left_x"
+			],
+			[
+				"fonts",
+				"font-size"
+			],
+			[
+				"y",
+				"ypos"
+			],
+			[
+				"top",
+				"top_y"
+			],
+			[
+				"lef",
+				"left_x"
+			],
+			[
+				"elem",
+				"elemis"
+			],
+			[
+				"move",
+				"moveMessage"
+			],
+			[
+				"ele",
+				"elems"
+			],
+			[
+				"fonw",
+				"fontWeight"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"th",
+				"thead\tTag"
+			],
+			[
+				"sup",
+				"superscript"
+			],
+			[
+				"cre",
+				"createElement"
+			],
+			[
+				"quo",
+				"quoteChildren"
+			],
+			[
+				"fun",
+				"func"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"cr",
+				"createTextNode"
+			],
+			[
+				"head",
+				"header_text"
+			],
+			[
+				"create",
+				"createTextNode"
+			],
+			[
+				"dde",
+				"dders_text"
+			],
+			[
+				"app",
+				"AppendChild"
+			],
+			[
+				"dti",
+				"dtitle_text"
+			],
+			[
+				"dt",
+				"dtitle"
+			],
+			[
+				"def",
+				"definition"
+			],
+			[
+				"abbr",
+				"abbreviations"
+			],
+			[
+				"abb",
+				"abbreviations"
+			],
+			[
+				"imge",
+				"imagegallery"
+			],
+			[
+				"i",
+				"inserAfter"
+			],
+			[
+				"des",
+				"description"
+			],
+			[
+				"em",
+				"emp"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"node",
+				"nodeType"
+			],
+			[
+				"whi",
+				"whichpic"
+			],
+			[
+				"old",
+				"ondonload"
+			],
+			[
+				"pop",
+				"popUp"
+			],
+			[
+				"win",
+				"winURL"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"bod",
+				"body_element"
+			],
+			[
+				"wi",
+				"whichpic"
+			],
+			[
+				"vit",
+				"vertical-align"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"text",
+				"text-align"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/a1445/Desktop/HTML/node/begining/server.js",
+			"settings":
+			{
+				"buffer_size": 251,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "server.js"
+			}
+		},
+		{
+			"file": "/C/Users/a1445/Desktop/HTML/node/school/student.js",
+			"settings":
+			{
+				"buffer_size": 82,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/a1445/Desktop/HTML/node/school/teacher.js",
+			"settings":
+			{
+				"buffer_size": 82,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/a1445/Desktop/HTML/node/school/klass.js",
+			"settings":
+			{
+				"buffer_size": 217,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/a1445/Desktop/HTML/node/school/index.js",
+			"settings":
+			{
+				"buffer_size": 235,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/a1445/Desktop/HTML/node/school/test.js",
+			"settings":
+			{
+				"buffer_size": 271,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "set",
+		"selected_items":
+		[
+			[
+				"set",
+				"Set Syntax: HTML"
+			],
+			[
+				"set ",
+				"Set Syntax: HTML"
+			],
+			[
+				"se",
+				"Set Syntax: HTML"
+			],
+			[
+				"setjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"set ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set jo",
+				"Set Syntax: JSON"
+			],
+			[
+				"set css",
+				"Set Syntax: CSS"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"seth",
+				"Set Syntax: HTML"
+			],
+			[
+				"setc",
+				"Set Syntax: CSS"
+			],
+			[
+				"setja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"setht",
+				"Set Syntax: HTML"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/a1445/Desktop/HTML/node/school"
+	],
+	"file_history":
+	[
+		"/C/Users/a1445/Desktop/HTML/testjQ/select/index.html",
+		"/C/Users/a1445/Desktop/HTML/testjQ/jQtest1.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/framcc/framcc.html",
+		"/C/Users/a1445/my-firstvueproject/src/App.vue",
+		"/C/Users/a1445/my-firstvueproject/index.html",
+		"/C/Users/a1445/learngit/jstrain/select/index.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/select/index.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/select/main.js",
+		"/C/Users/a1445/my-firstvueproject/src/main.js",
+		"/C/Users/a1445/my-firstvueproject/src/components/Hello.vue",
+		"/C/Users/a1445/my-firstvueproject/src/store.js",
+		"/C/Users/a1445/my-firstvueproject/src/components/testA.vue",
+		"/C/Users/a1445/Desktop/selectbox-master/select.css",
+		"/C/Users/a1445/Desktop/selectbox-master/index.html",
+		"/C/Users/a1445/learngit/jstrain/PicCarousel/PicCarousel.html",
+		"/C/Users/a1445/Desktop/selectbox-master/select.js",
+		"/C/Users/a1445/my-firstvueproject/package.json",
+		"/C/Users/a1445/Desktop/selectbox-master/README.md",
+		"/C/Users/a1445/Desktop/HTML/testjs/framcc/web.html",
+		"/C/Users/a1445/Desktop/addremovee.html",
+		"/C/Users/a1445/Desktop/web.html",
+		"/C/Users/a1445/Desktop/dianxin.html",
+		"/C/Users/a1445/Desktop/zhezhao.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/jayskrip/scripts/photo.js",
+		"/C/Users/a1445/Desktop/HTML/js/11_2.js",
+		"/C/Users/a1445/Desktop/HTML/testjs/makeone.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/movemessage.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/style.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/creatEle.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/jayskrip/html/index.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/jay skript and the Domsters/html/index.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/jay skript and the Domsters/styles/color.css",
+		"/C/Users/a1445/Desktop/HTML/testjs/jay skript and the Domsters/styles/basic.css",
+		"/C/Users/a1445/Desktop/HTML/testjs/jay skript and the Domsters/styles/layout.css",
+		"/C/Users/a1445/Desktop/HTML/testjs/jay skript and the Domsters/styles/typography.css",
+		"/C/Users/a1445/Desktop/HTML/testjs/pic.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/popUp.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/popUp.com",
+		"/C/Users/a1445/Desktop/HTML/testjs/rili.html",
+		"/C/Users/a1445/learngit/jstrain/calendar/calendar.html",
+		"/C/Users/a1445/learngit/jstrain/calendar/calendar_nooutjs.html",
+		"/C/Users/a1445/learngit/jstrain/calendar/js/main.js",
+		"/C/Users/a1445/learngit/git reset fd7c",
+		"/C/Users/a1445/learngit/jstrain/calendar/js/document.onload = function(){",
+		"/C/Users/a1445/learngit/jstrain/calendar.html",
+		"/C/Users/a1445/learngit/jstrain/calendar/css/calendar_main.css",
+		"/C/Users/a1445/Desktop/HTML/testcss/qq.html",
+		"/C/Users/a1445/Desktop/HTML/css/qqmain.css",
+		"/C/Users/a1445/Desktop/HTML/testcss/slide.html",
+		"/C/Users/a1445/Desktop/HTML/aui-artDialog-5024803/artDialog.html",
+		"/C/Users/a1445/Desktop/HTML/aui-artDialog-5024803/dist/dialog-min.js",
+		"/C/Users/a1445/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/a1445/Desktop/HTML/aui-artDialog-5024803/Gruntfile.js",
+		"/C/Users/a1445/Desktop/HTML/aui-artDialog-5024803/css/ui-dialog.css",
+		"/C/Users/a1445/Desktop/HTML/testjs/artDialog.html",
+		"/C/game/Watch_Dogs/开始游戏.exe.config",
+		"/C/Users/a1445/Documents/Tencent Files/1445422321/FileRecv/ExpenseExport.json",
+		"/C/Users/a1445/Desktop/HTML/css/qq_reset.css",
+		"/C/Users/a1445/Desktop/HTML/css/qq.css",
+		"/C/Users/a1445/Desktop/HTML/testcss/activity_page.html",
+		"/C/Users/a1445/Desktop/HTML/testcss/float.html",
+		"/C/Users/a1445/Desktop/HTML/testcss/strange_nav.html",
+		"/C/Users/a1445/Desktop/HTML/testcss/album.html",
+		"/C/Users/a1445/Desktop/HTML/testcss/tab1.html",
+		"/C/Users/a1445/learngit/csstrain/tab2.html",
+		"/C/Users/a1445/Desktop/HTML/testcss/tab2.html",
+		"/C/Users/a1445/Desktop/HTML/testcss/tab.html",
+		"/C/Users/a1445/Desktop/HTML/testcss/Filter.html",
+		"/C/Users/a1445/Desktop/HTML/testcss/calendar.html",
+		"/C/Users/a1445/Desktop/HTML/testjs/test1.html",
+		"/C/Users/a1445/learngit/readme.txt",
+		"/C/Users/a1445/learngit/test.txt",
+		"/C/Users/a1445/Desktop/readme.txt",
+		"/C/Users/a1445/Desktop/HTML/testcss/feedback.html",
+		"/C/Users/a1445/Desktop/HTML/testcss/searchbox.html",
+		"/C/Users/a1445/Desktop/HTML/searchbox.html",
+		"/C/Users/a1445/Desktop/HTML/test1.html",
+		"/C/Users/a1445/Desktop/HTML/css/array1.css",
+		"/C/Users/a1445/Desktop/HTML/array1.html",
+		"/C/Users/a1445/Desktop/array1.html"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 108.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"students",
+			"scoped",
+			"oncl",
+			"option_dd_groupe",
+			"ul",
+			"li",
+			"],\"",
+			"prev",
+			"index",
+			"{\n",
+			"wrap",
+			"liout",
+			"(){\n",
+			"img",
+			"prepareplaceholder",
+			"prepareplaceholder.png",
+			");\n",
+			"show",
+			".content2",
+			"690px",
+			"720px",
+			"970px",
+			"newsRightList",
+			".content1  .nesRightList",
+			".content1  .nesRightList{",
+			"content1InnerLeftInner",
+			"content1InnerRight",
+			"contentInnerRight",
+			"searchbox1",
+			"searchBox1",
+			";\n",
+			"<div class=\"block\">\n\t\t\t<ul>\n\t\t\t<li><a href=\"#\">1.刘翔搬入新豪宅  </a></li>\n\t\t\t<li><a href=\"#\">1.汽车自燃吞没车身</a></li>\n\t\t\t<li><a href=\"#\">1.面包车坠深崖    </a></li>\n\t\t\t<li><a href=\"#\">1.空间科学任务启动</a></li>\n\t\t\t</ul>\t\n\t\t</div>",
+			"divmix",
+			"ul",
+			">\n",
+			"li",
+			">\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "C:\\Users\\a1445\\Desktop\\HTML\\node"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/a1445/Desktop/HTML/node/begining/server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24,
+								24
+							]
+						],
+						"settings":
+						{
+							"auto_name": "server.js",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/a1445/Desktop/HTML/node/school/student.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 82,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								50,
+								50
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/a1445/Desktop/HTML/node/school/teacher.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 82,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								50,
+								50
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/a1445/Desktop/HTML/node/school/klass.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								196,
+								196
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/a1445/Desktop/HTML/node/school/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								139,
+								139
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/a1445/Desktop/HTML/node/school/test.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								74,
+								74
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\a1445\\Desktop\\HTML\\testjs\\PicCarousel\\PicCarousel.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
